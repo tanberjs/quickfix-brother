@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #f5f7fa;
+  scroll-snap-type: y mandatory;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  padding: 14px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo { font-size: 24px; font-weight: 800; color: #0b4da2; }
+.logo span { color: #f97316; }
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.nav-actions { display: flex; gap: 10px; }
+
+/* BUTTONS */
+.btn {
+  padding: 12px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.primary {
+  background: linear-gradient(135deg,#f97316,#fb923c);
+  color: white;
+}
+
+.secondary {
+  background: linear-gradient(135deg,#0b4da2,#2563eb);
+  color: white;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+/* HERO FULL PAGE IMAGE */
+.hero {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(11,77,162,0.85),
+      rgba(14,90,199,0.55)
+    ),
+    url("images/hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  padding: 100px 6%;
+}
+
+.hero h1 { font-size: 48px; margin-bottom: 10px; }
+.hero p { font-size: 18px; margin-bottom: 20px; }
+
+/* SERVICES */
+.services {
+  min-height: 100vh;
+  padding: 80px 6%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.service-box {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.service-img {
+  width: 90px;
+  margin-bottom: 12px;
+}
+
+/* WHY US */
+.why-us {
+  min-height: 100vh;
+  padding: 80px 6%;
+  background: white;
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.why-item {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.why-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #eef6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto 15px;
+}
+
+.why-icon img { width: 50px; }
+
+/* CTA */
+.cta {
+  min-height: 100vh;
+  background: #0b4da2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
