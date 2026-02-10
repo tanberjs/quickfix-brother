@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QuickFix Brothers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar reveal">
+    <div class="logo">Quick<span>Fix</span> Brothers</div>
+
+    <nav>
+      <a href="#hero" data-key="home">Home</a>
+      <a href="#services" data-key="services">Services</a>
+      <a href="#about" data-key="about">About Us</a>
+      <a href="#contact" data-key="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="langBtn" class="lang-toggle" aria-label="Toggle language">AR</button>
+      <button class="btn primary" data-key="bookNow">Book Now</button>
+    </div>
+  </header>
+
+  <!-- HERO (background image fills entire section) -->
+  <section id="hero" class="hero reveal">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 data-key="heroTitle">Your Home Repair Experts</h1>
+        <p data-key="heroDesc">Fast & Reliable Service at Your Doorstep</p>
+        <div class="hero-cta">
+          <button class="btn secondary" data-key="quote">Get a Free Quote</button>
+          <a href="#contact" class="btn primary" data-key="bookNowAlt">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services reveal">
+    <div class="service-box">
+      <img src="images/ac.png"
+       alt="AC Repair" class="service-img">
+      <h3 data-key="ac">AC Repair</h3>
+      <p data-key="acDesc">Cooling Solutions</p>
+    </div>
+
+    <div class="service-box">
+      <img src="images/fridge.png" alt="Refrigerator Repair" class="service-img">
+      <h3 data-key="fridge">Refrigerator Repair</h3>
+      <p data-key="fridgeDesc">Fridge Fixes</p>
+    </div>
+
+    <div class="service-box">
+      <img src="images/hero.png" alt="Appliance Services" class="service-img">
+      <h3 data-key="appliance">Appliance Services</h3>
+      <p data-key="applianceDesc">All Home Appliances</p>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="about" class="why-us reveal">
+    <h2 data-key="why">Why Choose Us?</h2>
+
+    <div class="why-grid">
+      <div class="why-item reveal-child">
+        <div class="why-icon">
+          <img src="images/icon-tech.png" alt="">
+        </div>
+        <h4 data-key="exp">Experienced Technicians</h4>
+        <p data-key="expDesc">Skilled & Trusted</p>
+      </div>
+
+      <div class="why-item reveal-child">
+        <div class="why-icon">
+          <img src="images/icon-price.png" alt="">
+        </div>
+        <h4 data-key="price">Affordable Pricing</h4>
+        <p data-key="priceDesc">Upfront & Fair Rates</p>
+      </div>
+
+      <div class="why-item reveal-child">
+        <div class="why-icon">
+          <img src="images/icon-same.png" alt="">
+        </div>
+        <h4 data-key="same">Same-Day Service</h4>
+        <p data-key="sameDesc">Fast & Efficient</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="cta reveal">
+    <div class="cta-inner">
+      <h2 data-key="cta">Need Help? Schedule Your Repair Today!</h2>
+      <button class="btn primary" data-key="bookService">Book a Service</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
