@@ -1,105 +1,353 @@
+index.html
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>QuickFix Brothers</title>
+  <meta name="description" content="QuickFix Brothers - Professional home repair services including AC repair, refrigerator repair, and appliance services. Fast, reliable, and affordable." />
+  <meta name="keywords" content="home repair, AC repair, refrigerator repair, appliance services, same-day service" />
+  <title>QuickFix Brothers - Your Home Repair Experts</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- NAVBAR -->
-  <header class="navbar reveal">
+  <header class="navbar reveal" id="navbar">
     <div class="logo">Quick<span>Fix</span> Brothers</div>
-
-    <nav>
-      <a href="#hero" data-key="home">Home</a>
-      <a href="#services" data-key="services">Services</a>
-      <a href="#about" data-key="about">About Us</a>
-      <a href="#contact" data-key="contact">Contact</a>
+    <nav id="mainNav">
+      <a href="#hero" data-key="home" class="nav-link">Home</a>
+      <a href="#services" data-key="services" class="nav-link">Services</a>
+      <a href="#about" data-key="about" class="nav-link">About Us</a>
+      <a href="#testimonials" data-key="testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" data-key="contact" class="nav-link">Contact</a>
     </nav>
-
     <div class="nav-actions">
-      <button id="langBtn" class="lang-toggle" aria-label="Toggle language">AR</button>
-      <button class="btn primary" data-key="bookNow">Book Now</button>
+      <button id="langBtn" class="lang-toggle" aria-label="Toggle language">
+        <i class="fas fa-globe"></i>
+        <span class="lang-text">AR</span>
+      </button>
+      <button class="btn primary cta-pulse" data-key="bookNow" id="bookNowBtn">
+        <i class="fas fa-calendar-check"></i>
+        <span data-key="bookNow">Book Now</span>
+      </button>
     </div>
   </header>
-
   <!-- HERO (background image fills entire section) -->
   <section id="hero" class="hero reveal">
+    <div class="hero-particles"></div>
     <div class="hero-inner">
       <div class="hero-text">
+        <div class="hero-badge" data-key="heroBadge">
+          <i class="fas fa-star"></i>
+          <span data-key="heroBadge">Trusted by 10,000+ Customers</span>
+        </div>
         <h1 data-key="heroTitle">Your Home Repair Experts</h1>
         <p data-key="heroDesc">Fast & Reliable Service at Your Doorstep</p>
+        <div class="hero-features">
+          <div class="hero-feature">
+            <i class="fas fa-clock"></i>
+            <span data-key="feature24">24/7 Available</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-shield-alt"></i>
+            <span data-key="featureWarranty">Warranty Guaranteed</span>
+          </div>
+          <div class="hero-feature">
+            <i class="fas fa-thumbs-up"></i>
+            <span data-key="featureSatisfaction">100% Satisfaction</span>
+          </div>
+        </div>
         <div class="hero-cta">
-          <button class="btn secondary" data-key="quote">Get a Free Quote</button>
-          <a href="#contact" class="btn primary" data-key="bookNowAlt">Book Now</a>
+          <button class="btn secondary" data-key="quote" id="quoteBtn">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span data-key="quote">Get a Free Quote</span>
+          </button>
+          <a href="#contact" class="btn primary" data-key="bookNowAlt">
+            <i class="fas fa-phone-alt"></i>
+            <span data-key="bookNowAlt">Book Now</span>
+          </a>
         </div>
       </div>
     </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </section>
-
   <!-- SERVICES -->
   <section id="services" class="services reveal">
-    <div class="service-box">
-      <img src="images/ac.png"
-       alt="AC Repair" class="service-img">
-      <h3 data-key="ac">AC Repair</h3>
-      <p data-key="acDesc">Cooling Solutions</p>
+    <div class="section-header">
+      <h2 data-key="servicesTitle">Our Services</h2>
+      <p data-key="servicesSubtitle">Professional Solutions for All Your Home Repair Needs</p>
     </div>
-
-    <div class="service-box">
-      <img src="images/fridge.png" alt="Refrigerator Repair" class="service-img">
-      <h3 data-key="fridge">Refrigerator Repair</h3>
-      <p data-key="fridgeDesc">Fridge Fixes</p>
-    </div>
-
-    <div class="service-box">
-      <img src="images/hero.png" alt="Appliance Services" class="service-img">
-      <h3 data-key="appliance">Appliance Services</h3>
-      <p data-key="applianceDesc">All Home Appliances</p>
+    <div class="services-grid">
+      <div class="service-box reveal-child">
+        <div class="service-icon-wrapper">
+          <img src="images/ac.png" alt="AC Repair" class="service-img">
+          <div class="service-badge">
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+        <h3 data-key="ac">AC Repair</h3>
+        <p data-key="acDesc">Cooling Solutions</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> <span data-key="acFeature1">Installation & Maintenance</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-key="acFeature2">Emergency Repairs</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-key="acFeature3">Energy Efficiency</span></li>
+        </ul>
+        <button class="btn-service" data-key="learnMore">
+          <span data-key="learnMore">Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="service-box reveal-child featured">
+        <div class="featured-badge" data-key="popular">
+          <i class="fas fa-fire"></i>
+          <span data-key="popular">Most Popular</span>
+        </div>
+        <div class="service-icon-wrapper">
+          <img src="images/fridge.png" alt="Refrigerator Repair" class="service-img">
+          <div class="service-badge">
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+        <h3 data-key="fridge">Refrigerator Repair</h3>
+        <p data-key="fridgeDesc">Fridge Fixes</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> <span data-key="fridgeFeature1">All Brands Supported</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-key="fridgeFeature2">Same-Day Service</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-key="fridgeFeature3">Genuine Parts</span></li>
+        </ul>
+        <button class="btn-service" data-key="learnMore">
+          <span data-key="learnMore">Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="service-box reveal-child">
+        <div class="service-icon-wrapper">
+          <img src="images/hero.png" alt="Appliance Services" class="service-img">
+          <div class="service-badge">
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+        <h3 data-key="appliance">Appliance Services</h3>
+        <p data-key="applianceDesc">All Home Appliances</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> <span data-key="applianceFeature1">Washing Machines</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-key="applianceFeature2">Dishwashers</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-key="applianceFeature3">Ovens & More</span></li>
+        </ul>
+        <button class="btn-service" data-key="learnMore">
+          <span data-key="learnMore">Learn More</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
     </div>
   </section>
-
   <!-- WHY US -->
   <section id="about" class="why-us reveal">
-    <h2 data-key="why">Why Choose Us?</h2>
-
+    <div class="section-header">
+      <h2 data-key="why">Why Choose Us?</h2>
+      <p data-key="whySubtitle">We're Committed to Excellence in Every Repair</p>
+    </div>
     <div class="why-grid">
       <div class="why-item reveal-child">
         <div class="why-icon">
-          <img src="images/icon-tech.png" alt="">
+          <i class="fas fa-user-tie"></i>
         </div>
         <h4 data-key="exp">Experienced Technicians</h4>
         <p data-key="expDesc">Skilled & Trusted</p>
       </div>
-
       <div class="why-item reveal-child">
         <div class="why-icon">
-          <img src="images/icon-price.png" alt="">
+          <i class="fas fa-dollar-sign"></i>
         </div>
-        <h4 data-key="price">Affordable Price</h4>
+        <h4 data-key="price">Affordable Pricing</h4>
         <p data-key="priceDesc">Upfront & Fair Rates</p>
       </div>
-
       <div class="why-item reveal-child">
         <div class="why-icon">
-          <img src="images/icon-same.png" alt="">
+          <i class="fas fa-clock"></i>
         </div>
         <h4 data-key="same">Same-Day Service</h4>
         <p data-key="sameDesc">Fast & Efficient</p>
       </div>
+      <div class="why-item reveal-child">
+        <div class="why-icon">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <h4 data-key="certified">Certified Professionals</h4>
+        <p data-key="certifiedDesc">Licensed & Insured</p>
+      </div>
+      <div class="why-item reveal-child">
+        <div class="why-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h4 data-key="support">24/7 Support</h4>
+        <p data-key="supportDesc">Always Here to Help</p>
+      </div>
+      <div class="why-item reveal-child">
+        <div class="why-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h4 data-key="warranty">Warranty Included</h4>
+        <p data-key="warrantyDesc">Quality Guaranteed</p>
+      </div>
     </div>
   </section>
-
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials reveal">
+    <div class="section-header">
+      <h2 data-key="testimonialsTitle">What Our Customers Say</h2>
+      <p data-key="testimonialsSubtitle">Real Reviews from Real People</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal-child">
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text" data-key="testimonial1">"Excellent service! They fixed my AC in less than an hour. Highly professional and affordable."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="author-info">
+            <h5 data-key="customer1">Ahmed Al-Rashid</h5>
+            <span data-key="location1">Dubai, UAE</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal-child">
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text" data-key="testimonial2">"Best refrigerator repair service in town. Same-day service and very reasonable prices!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="author-info">
+            <h5 data-key="customer2">Sarah Johnson</h5>
+            <span data-key="location2">Abu Dhabi, UAE</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal-child">
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text" data-key="testimonial3">"Very professional team. They repaired my washing machine quickly and it works perfectly now!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="author-info">
+            <h5 data-key="customer3">Mohammed Hassan</h5>
+            <span data-key="location3">Sharjah, UAE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- CTA -->
   <section id="contact" class="cta reveal">
     <div class="cta-inner">
+      <div class="cta-icon">
+        <i class="fas fa-tools"></i>
+      </div>
       <h2 data-key="cta">Need Help? Schedule Your Repair Today!</h2>
-      <button class="btn primary" data-key="bookService">Book a Service</button>
+      <p data-key="ctaSubtitle">Get in touch with our expert team for fast and reliable service</p>
+      <div class="cta-buttons">
+        <button class="btn primary btn-large cta-pulse" data-key="bookService" id="bookServiceBtn">
+          <i class="fas fa-calendar-check"></i>
+          <span data-key="bookService">Book a Service</span>
+        </button>
+        <a href="tel:+971501234567" class="btn secondary btn-large" id="callBtn">
+          <i class="fas fa-phone"></i>
+          <span data-key="callNow">Call Now</span>
+        </a>
+      </div>
+      <div class="cta-contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+971 50 123 4567</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@quickfixbrothers.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span data-key="address">Dubai, United Arab Emirates</span>
+        </div>
+      </div>
     </div>
   </section>
-
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">Quick<span>Fix</span> Brothers</div>
+        <p data-key="footerDesc">Your trusted partner for all home repair needs. Quality service, affordable prices.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4 data-key="quickLinks">Quick Links</h4>
+        <ul>
+          <li><a href="#hero" data-key="home">Home</a></li>
+          <li><a href="#services" data-key="services">Services</a></li>
+          <li><a href="#about" data-key="about">About Us</a></li>
+          <li><a href="#contact" data-key="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 data-key="servicesTitle">Services</h4>
+        <ul>
+          <li><a href="#services" data-key="ac">AC Repair</a></li>
+          <li><a href="#services" data-key="fridge">Refrigerator Repair</a></li>
+          <li><a href="#services" data-key="appliance">Appliance Services</a></li>
+          <li><a href="#services" data-key="emergency">Emergency Repairs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 data-key="contactUs">Contact Us</h4>
+        <ul class="contact-list">
+          <li><i class="fas fa-phone"></i> +971 50 123 4567</li>
+          <li><i class="fas fa-envelope"></i> info@quickfixbrothers.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-key="address">Dubai, UAE</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 QuickFix Brothers. <span data-key="rights">All rights reserved.</span></p>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
-</html>
+</html
